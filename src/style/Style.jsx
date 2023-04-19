@@ -30,7 +30,6 @@ export const HeaderLi = styled.li`
     margin: auto 10px;
 
     a {
-      color: black;
       text-decoration : none;
     }
 
