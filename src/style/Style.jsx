@@ -1,10 +1,38 @@
 import styled, {createGlobalStyle} from "styled-components";
-export const HeaderLi = styled.li`
-    color: white;
-`
 
 export const HeaderWrapper = styled.div`
-    background: black;
+    display: flex;
+    height: 70px;
+
+
+    nav {
+      display: flex;
+      margin: auto 0px;
+  
+    }
+
+
+    img{
+      width: 100px;
+      height: 70px;
+      margin-right: 20px;
+    }
+
+`
+
+export const HeaderUl = styled.ul`
+   display: flex;
+
+`
+
+export const HeaderLi = styled.li`
+    margin: auto 10px;
+
+    a {
+      color: black;
+      text-decoration : none;
+    }
+
 `
 
 export const Carousel = styled.ul`

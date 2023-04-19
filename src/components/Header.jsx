@@ -1,14 +1,16 @@
 import * as React from "react";
 import { Outlet, Link } from "react-router-dom";
 import '../style/Header.scss'
-import {HeaderLi, HeaderWrapper} from "../style/Style.jsx";
+import {HeaderLi, HeaderUl, HeaderWrapper} from "../style/Style.jsx";
+import car from '../assets/Netflix_logo.svg';
 
 const Header = () => {
 
     return (
         <HeaderWrapper>
           <nav>
-            <ul>
+            <img src={car} alt="Netflix logo"></img>
+            <HeaderUl>
               <HeaderLi>
                 <Link to="/">Accueil</Link>
               </HeaderLi>
@@ -24,7 +26,7 @@ const Header = () => {
               <HeaderLi>
                 <Link to="/contact">Ma liste</Link>
               </HeaderLi>
-            </ul>
+            </HeaderUl>
           </nav>
         </HeaderWrapper>
       )
