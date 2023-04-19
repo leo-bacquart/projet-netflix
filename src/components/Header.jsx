@@ -25,8 +25,6 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-    
-          <Outlet />
         </>
       )
     };
