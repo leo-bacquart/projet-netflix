@@ -49,4 +49,16 @@ export const MoviePoster = styled.li`
     scale: (1.08);
     cursor: pointer;
   }
+<<<<<<< Updated upstream
+=======
+`
+
+
+export const Footer = styled.footer`
+
+.liste1{
+  display:flex;
+}
+    
+>>>>>>> Stashed changes
 `
