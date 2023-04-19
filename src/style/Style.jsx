@@ -51,3 +51,8 @@ export const MoviePoster = styled.li`
     cursor: pointer;
   }
 `
+
+
+export const Footer = styled.footer`
+    
+`
