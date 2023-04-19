@@ -26,12 +26,10 @@ const List = ({params, children}) => {
 }
 
 
-const Item = ({movie}) => {
-    return (
-        <li>
-            <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/>
-        </li>
-    )
-}
+const Item = ({movie}) => (
+    <li>
+        <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/>
+    </li>
+)
 
 export default List
