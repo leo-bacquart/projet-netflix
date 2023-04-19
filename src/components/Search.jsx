@@ -24,11 +24,13 @@ function SearchBar({ onSearch }) {
         <div>
           <input
             type="text"
-            placeholder="Rechercher..."
+            placeholder="Titres, personne, genre..."
             value={searchTerm}
             onChange={handleSearch}
           />
-          <button onClick={handleClose}>Fermer</button>
+          <button onClick={handleClose}>
+        <img src={loupe} alt="loupe barre de recherche"></img>
+      </button>
         </div>
       ) : (
         <button onClick={handleOpen}>
