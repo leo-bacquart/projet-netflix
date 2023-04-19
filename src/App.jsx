@@ -3,6 +3,7 @@ import './App.scss';
 import Home from "./Pages/Home.jsx";
 import Layout from "./Pages/Layout.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import './style/reset.scss'
 
 function App() {
     const [selectedMovie, setSelectedMovie] = React.useState('');
