@@ -18,7 +18,8 @@ ul {
 .image{
    gap:10px;       //  espace entre les images
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
+  height: 80%;
 }
 img{
   object-fit: contain;
