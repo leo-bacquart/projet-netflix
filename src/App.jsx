@@ -3,17 +3,12 @@ import './App.scss';
 import Home from "./Pages/Home.jsx";
 import Layout from "./Pages/Layout.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import './style/reset.scss';
+import './fonts/Netflix Sans Light.otf';
+import './fonts/Netflix Sans Medium.otf';
+import './fonts/Netflix Sans Bold.otf';
 
 function App() {
-    const [selectedMovie, setSelectedMovie] = React.useState('');
-
-    React.useEffect(() => {
-        localStorage.setItem('selectedMovie', selectedMovie);
-    }, [selectedMovie]);
-
-    const handleSearch = (event) => {
-        setSelectedMovie(event.target.value);
-    }
 
     return (
         <BrowserRouter>
