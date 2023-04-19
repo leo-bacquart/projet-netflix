@@ -18,9 +18,10 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
     }, [] /* Pas de dépendance, la fonction s'éxécute une seule fois */)
 
     return (
+    
         <div>
             <h2>{children}</h2>
-            <ul>
+            <ul className="image">
                 {movieList.map((movie) => <Item key={movie.key} movie={movie}/> )} {/* Création d'une instance movie par partie du tableau */}
             </ul>
         </div>
@@ -30,7 +31,7 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
 
 const Item = ({movie}) => (
     <li>
-        <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> {/*Récupération de l'affiche*/}
+        <img  src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> {/*Récupération de l'affiche*/}
     </li>
 )
 
