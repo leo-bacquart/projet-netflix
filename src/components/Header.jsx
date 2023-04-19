@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Outlet, Link } from "react-router-dom";
 import '../style/Header.scss'
+import {HeaderLi} from "../style/Style.jsx";
 
 const Header = () => {
 
@@ -8,21 +9,21 @@ const Header = () => {
         <>
           <nav>
             <ul>
-              <li>
+              <HeaderLi>
                 <Link to="/">Accueil</Link>
-              </li>
-              <li>
+              </HeaderLi>
+              <HeaderLi>
                 <Link to="/blogs">Séries</Link>
-              </li>
-              <li>
+              </HeaderLi>
+              <HeaderLi>
                 <Link to="/contact">Films</Link>
-              </li>
-              <li>
+              </HeaderLi>
+              <HeaderLi>
                 <Link to="/contact">Nouveautés les plus regardées</Link>
-              </li>
-              <li>
+              </HeaderLi>
+              <HeaderLi>
                 <Link to="/contact">Ma liste</Link>
-              </li>
+              </HeaderLi>
             </ul>
           </nav>
         </>
