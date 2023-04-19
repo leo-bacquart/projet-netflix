@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import '../style/Header.scss'
 import {HeaderLi, HeaderUl, HeaderWrapper} from "../style/Style.jsx";
 import car from '../assets/Netflix_logo.svg';
+import SearchBar from "./Search";
 
 const Header = () => {
 
@@ -28,6 +29,7 @@ const Header = () => {
               </HeaderLi>
             </HeaderUl>
           </nav>
+          <SearchBar></SearchBar>
         </HeaderWrapper>
       )
     };
