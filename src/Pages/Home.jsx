@@ -6,6 +6,7 @@ const Home = () => {
 
     return (
         <List params={'/trending/movie/day'}>Tendance</List>
+        <List params='/movie/now_playing'>En ce moment</List>
     )
 
 }
