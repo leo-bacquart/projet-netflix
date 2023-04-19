@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as API from "./callAPI.jsx";
-import '../style/Carousel.scss'
-import {Carousel, MoviePoster} from "../style/Style.jsx";
+import {CarouselWrapper, MoviePoster} from "../style/Style.jsx";
 
 const List = ({params, children}) => { /* params = paramètres de recherche dans l'API, children = Prend en paramètre le contenu de la balise */
     const [movieList, setMovieList] = React.useState([]) /* Création state MovieList, définition par un tableau vide */
@@ -20,20 +19,20 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
 
     return (
     
-        <div>
+        <CarouselWrapper>
             <h2>{children}</h2>
-            <Carousel>
+            <ul>
                 {movieList.map((movie) => <Item key={movie.key} movie={movie}/> )} {/* Création d'une instance movie par partie du tableau */}
-            </Carousel>
-        </div>
+            </ul>
+        </CarouselWrapper>
     )
 }
 
 
 const Item = ({movie}) => (
-    <MoviePoster>
+    <li>
         <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> {/*Récupération de l'affiche*/}
-    </MoviePoster>
+    </li>
 )
 
 export default List
