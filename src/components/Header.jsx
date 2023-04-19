@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Outlet, Link } from "react-router-dom";
 import '../style/Header.scss'
-import {HeaderLi} from "../style/Style.jsx";
+import {HeaderLi, HeaderWrapper} from "../style/Style.jsx";
 
 const Header = () => {
 
     return (
-        <>
+        <HeaderWrapper>
           <nav>
             <ul>
               <HeaderLi>
@@ -26,7 +26,7 @@ const Header = () => {
               </HeaderLi>
             </ul>
           </nav>
-        </>
+        </HeaderWrapper>
       )
     };
 
