@@ -3,18 +3,6 @@ import * as React from "react";
 const Footer = () => {
 
     return (
-<<<<<<< Updated upstream
-        <>
-            <nav>
-                <ul>
-                    <li>A</li>
-                    <li>B</li>
-                    <li>C</li>
-                    <li>D</li>
-                </ul>
-            </nav>
-        </>
-=======
         <Footer>
             <ul className="liste1">
                 <li>Audiodescription</li>
@@ -22,7 +10,6 @@ const Footer = () => {
                 <li>Cartes cadeaux</li>
             </ul>
         </Footer>
->>>>>>> Stashed changes
     )
 }
 
