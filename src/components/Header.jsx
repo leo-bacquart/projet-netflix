@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Outlet, Link } from "react-router-dom";
+import '../style/Header.scss'
 import {HeaderLi, HeaderWrapper} from "../style/Style.jsx";
 
 const Header = () => {

@@ -3,11 +3,16 @@ import * as React from "react";
 const Footer = () => {
 
     return (
-        <Footer>
-            <ul>
-                <li></li>
-            </ul>
-        </Footer>
+        <>
+            <nav>
+                <ul>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                </ul>
+            </nav>
+        </>
     )
 }
 
