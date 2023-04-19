@@ -26,7 +26,7 @@ const Header = () => {
             </ul>
           </nav>
     
-          <Outlet />
+         
         </>
       )
     };
