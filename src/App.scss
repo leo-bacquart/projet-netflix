@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("Netflix Sans Light"),
+  url("./fonts/Netflix Sans Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Medium";   /*Can be any text*/
+  src: local("Netflix Sans Medium"),
+  url("./fonts/Netflix Sans Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("Netflix Sans Bold"),
+  url("./fonts/Netflix Sans Bold.otf") format("opentype");
+}
+
+* {
+  font-family: Medium, sans-serif;
+}
