@@ -10,6 +10,7 @@ export const HeaderWrapper = styled.div`
       margin: auto 0px;
   
     }
+    
 
 
     img{
@@ -29,8 +30,12 @@ export const HeaderLi = styled.li`
     margin: auto 10px;
 
     a {
-      color: black;
       text-decoration : none;
+    }
+
+    a:hover {
+      font-weight: bold;
+      color: grey;
     }
 
 `

@@ -7,6 +7,11 @@ import './style/reset.scss';
 import './fonts/Netflix Sans Light.otf';
 import './fonts/Netflix Sans Medium.otf';
 import './fonts/Netflix Sans Bold.otf';
+import Series from "./Pages/Series.jsx";
+import Films from "./Pages/Films.jsx";
+import Nouveautes from "./Pages/Nouveautes.jsx";
+import List from "./components/MovieCarousel.jsx";
+import Liste from "./Pages/Liste.jsx";
 
 function App() {
 
@@ -15,6 +20,10 @@ function App() {
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
                     <Route index element={<Home/>} />
+                    <Route path={"series"} element={<Series/>}/>
+                    <Route path={'films'} element={<Films/>}/>
+                    <Route path={'new'} element={<Nouveautes/>}/>
+                    <Route path={'list'} element={<Liste/>}/>
 
                 </Route>
             </Routes>
