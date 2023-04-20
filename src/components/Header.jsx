@@ -36,7 +36,8 @@ const Header = () => {
           </li>
         </ul>
         <SearchBar/>
-        <a href="#">
+
+        <a href="#" className="notifs">
           <img src={bell} alt="Notifications"></img>
         </a>
 
