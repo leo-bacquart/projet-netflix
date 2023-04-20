@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../style/Search.scss'
 import loupe from '../assets/loupe.svg';
 
 function SearchBar({ onSearch }) {
@@ -19,7 +20,7 @@ function SearchBar({ onSearch }) {
   }
 
   return (
-    <div>
+    <div class="Search">
       {isOpen ? (
         <div>
           <input
@@ -28,13 +29,13 @@ function SearchBar({ onSearch }) {
             value={searchTerm}
             onChange={handleSearch}
           />
-          <button onClick={handleClose}>
-        <img src={loupe} alt="loupe barre de recherche"></img>
-      </button>
+            <button onClick={handleClose}>
+                <img src={loupe} alt="loupe barre de recherche" className="loupe-icon"></img>
+            </button>
         </div>
-      ) : (
+        ) : (
         <button onClick={handleOpen}>
-          <img src={loupe} alt="loupe barre de recherche"></img>
+          <img src={loupe} alt="loupe barre de recherche" className="loupe-icon"></img>
         </button>
       )}
     </div>

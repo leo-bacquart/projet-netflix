@@ -2,7 +2,7 @@ import * as React from "react";
 import { Outlet, Link } from "react-router-dom";
 import '../style/Header.scss'
 import {HeaderLi, HeaderUl, HeaderWrapper} from "../style/Style.jsx";
-import car from '../assets/Netflix_logo.svg';
+import logo from '../assets/Netflix_logo.svg';
 import SearchBar from "./Search";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div className={'headerWrapper'}>
           <nav>
-            <img src={car} alt="Netflix logo"></img>
+            <img src={logo} alt="Netflix logo"></img>
             <ul>
               <li>
                 <Link to="/">Accueil</Link>
