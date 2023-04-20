@@ -1,10 +1,9 @@
 import * as React from "react";
-import { Nav } from "../style/Style";
 
 const Footer = () => {
 
     return (
-        <Nav>
+        <nav>
              <ul className="liste1">
                 <li>Audiodescription</li>
                 <li>Centre d'aide</li>
@@ -21,7 +20,7 @@ const Footer = () => {
                 <li>Informations légales</li>
                 <li>Preferences de cookies</li>
             </ul>
-         </Nav>
+         </nav>
     )
 }
 
