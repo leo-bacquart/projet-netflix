@@ -20,12 +20,12 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
 
     return (
     
-        <Carousel>
+        <div className={'carousel'}>
             <h2>{children}</h2>
             <ul>
                 {movieList.map((movie) => <Item key={movie.key} movie={movie}/> )} {/* Création d'une instance movie par partie du tableau */}
             </ul>
-        </Carousel>
+        </div>
     )
 }
 
