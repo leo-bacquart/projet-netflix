@@ -5,7 +5,7 @@ const Footer = () => {
     return (
        
            
-        <Nav>
+        <nav>
              <div className="liens">
                 <a href="https://www.facebook.com/netflixfrance" target="blank">
                 <img className="facebook" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZU2gzuQOReQPDQuaDXrfbqB0gXkItLcKcE55-WNc&s" alt="" />
@@ -72,7 +72,7 @@ const Footer = () => {
                 
             
             
-         </Nav>
+         </nav>
     )
 }
 
