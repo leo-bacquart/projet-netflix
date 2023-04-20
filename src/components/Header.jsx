@@ -8,29 +8,30 @@ import SearchBar from "./Search";
 const Header = () => {
 
     return (
-        <HeaderWrapper>
+        <div className={'headerWrapper'}>
           <nav>
             <img src={car} alt="Netflix logo"></img>
-            <HeaderUl>
-              <HeaderLi>
+            <ul>
+              <li>
                 <Link to="/">Accueil</Link>
-              </HeaderLi>
-              <HeaderLi>
+              </li>
+              <li>
                 <Link to="/series">Séries</Link>
-              </HeaderLi>
-              <HeaderLi>
+              </li>
+              <li>
                 <Link to="/films">Films</Link>
-              </HeaderLi>
-              <HeaderLi>
+              </li>
+              <li>
                 <Link to="/new">Nouveautés les plus regardées</Link>
-              </HeaderLi>
-              <HeaderLi>
+              </li>
+              <li>
                 <Link to="/list">Ma liste</Link>
-              </HeaderLi>
-            </HeaderUl>
+              </li>
+            </ul>
+              <SearchBar/>
           </nav>
-          <SearchBar></SearchBar>
-        </HeaderWrapper>
+
+        </div>
       )
     };
 
