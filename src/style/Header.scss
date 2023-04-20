@@ -32,4 +32,31 @@
       }
     }
   }
+
+  .dropdown{
+
+    .dropdown-toggle{
+
+      width: 40px;
+      height: 40px;
+
+     img{
+
+      width: 40px;
+      height: 40px;
+
+     }
+
+    }
+
+  
+    .dropdown-menu{
+      display: block;
+      position: absolute;
+    }
+  
+
+  }
+
+
 }

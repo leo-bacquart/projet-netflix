@@ -1,30 +1,33 @@
-.Search{
+.Search {
     display: flex;
-    z-index: 40;;
-    
-}
+    z-index: 40;
+  }
 
-.Search div{
+  
+  .Search div {
     display: flex;
-}
-
-.Search div input{
-
+  }
+  
+  .Search div input {
     width: 300px;
+    height: 35px;
     background-color: black;
-}
+    outline: none;
+    border: none;
+  }
+  
+  .Search button {
+    max-width: 30px;
+    height: 35px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+  }
+  
+  .Search button img.loupe-icon {
+    width: 25px;
+    height: 35px;
+  }
 
-
-.Search button{
-max-width: 40px;
-height: 40px;
-padding: 0;
-background-color: rgba(0, 0, 0, 0);
-}
-
-.Search button img.loupe-icon {
-    width: 40px;
-    height: 40px;
-    
-}
-
+  
