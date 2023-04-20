@@ -1,16 +1,26 @@
 .carousel {
   height: 300px;
+  margin-top: 20px;
+  margin-left: 30px;
 
   h2 {
     height: 10%;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left:10px;
   }
-
 
   ul {
     display: flex;
     height: 90%;
     overflow-x: scroll;
     overflow-y: hidden;
+    -ms-overflow-style: none; /* hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* hide scrollbar for Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* hide scrollbar for WebKit-based browsers */
+    }
 
     li {
       height: 100%;
@@ -20,11 +30,10 @@
         padding: 10px;
         transition: transform 0.5s ease-in-out;
 
-
-      }
-      img:hover {
-        transform: scale(1.08);
-        transition: transform 0.5s ease-in-out;
+        &:hover {
+          transform: scale(1.08);
+          transition: transform 0.5s ease-in-out;
+        }
       }
     }
   }

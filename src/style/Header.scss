@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   z-index: 40;
+  margin-left: -10px;
 
   nav {
     margin: 0 50px;
@@ -23,7 +24,7 @@
       flex-grow: 2;
 
       li {
-        padding: 5px;
+        padding: 10px;
 
         a {
           text-decoration: none;
