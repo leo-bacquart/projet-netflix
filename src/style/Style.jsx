@@ -55,3 +55,37 @@ export const MoviePoster = styled.li`
     cursor: pointer;
   }
 `
+
+
+ export const Nav = styled.nav`
+ display:flex;
+ justify-content: space-between;
+ .liste1{
+  
+  
+  
+  
+ }
+ .liste2{
+  
+
+ }
+
+ .liste3{
+  
+
+
+ }
+
+
+
+ `
+
+
+
+// export const Footernav = styled.nav`
+// .liste1{
+  // display:flex;
+// }
+
+// `
