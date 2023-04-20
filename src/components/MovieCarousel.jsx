@@ -33,6 +33,9 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
 const Item = ({movie}) => (
     <li>
         <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> {/*Récupération de l'affiche*/}
+        <div className="details">
+            <h3>{movie.title}</h3>
+        </div>
     </li>
 )
 
