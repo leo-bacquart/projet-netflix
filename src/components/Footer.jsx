@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Nav } from "../style/Style";
 
 const Footer = () => {
 
