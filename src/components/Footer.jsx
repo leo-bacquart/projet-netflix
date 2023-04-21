@@ -1,4 +1,5 @@
 import * as React from "react";
+import '../style/Footer.scss';
 
 const Footer = () => {
 
@@ -27,48 +28,99 @@ const Footer = () => {
 
             
             
+            <div className="container">
+
+                <div className="listes">
             
-            
-                <ul className="liste1 liste">
-                    <a href="https://www.netflix.com/browse/audio-description" target="blank">
-                    <li>Audiodescription</li>
-                    </a>
-                    <a href="https://help.netflix.com/" target="blank">
-                    <li>Centre d'aide</li>
-                    </a>
-                    <a href="https://www.netflix.com/redeem">
-                    <li>Cartes cadeaux</li>
-                    </a>
-                    <br />
-                    <button>Service Code</button>
-                    <br />
-                    <br />
-                    <span className="description">© 1997-2023 Netflix, Inc.</span>
+                    <ul >
+                        <a href="https://www.netflix.com/browse/audio-description" target="blank">
+                        <li>Audiodescription</li>
+                        </a>
+                        <a href="http://ir.netflix.com/" target="blank">
+                        <li>Investor Relations</li>
+                        </a>
+                        <a href="https://help.netflix.com/legal/privacy">
+                        <li>Privacy</li>
+                        </a>
+                        <a href="https://help.netflix.com/contactus">
+
+                        <li>Contact Us</li>
+                        </a>
+
                         
-                </ul>
-                <ul className="liste2 liste">
-                    <a href="http://ir.netflix.com/">
-                    <li>Relations Investisseurs</li>
+                        {/* <button>Service Code</button> */}
+                        
+                        {/* <span className="description">© 1997-2023 Netflix, Inc.</span> */}
+                        
+                    </ul>
+                </div>
+                
+                <div>
+                    <ul className="liste2 liste">
+                        <a href="https://help.netflix.com/" target="blank">
+                        <li>Help Center</li>
+                        </a>
+                        <a href="https://jobs.netflix.com/" target="blank">
+                        <li>Jobs</li>
+                        </a>
+                        <a href="https://help.netflix.com/legal/notices" target="blank">
+                        <li>Legal Notices</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                    <a href="https://www.netflix.com/redeem" target="blank">
+                        <li>Gift Cards</li>
                     </a>
-                    <a href="https://jobs.netflix.com/">
-                    <li>Recrutement</li>
-                    </a>
-                    <a href="https://netflix.shop/">
-                    <li>Boutique Netflix</li>
-                    </a>
-                </ul>
-                <ul className="liste3 liste">
-                    <a href="https://help.netflix.com/legal/privacy">
-                    <li>Confidentialité</li>
-                    </a>
-                    <a href="https://help.netflix.com/legal/notices">
-                    <li>Informations légales</li>
-                    </a>
-                    <a href="https://www.netflix.com/Cookies">
-                    <li>Preferences de cookies</li>
-                    </a>
-                </ul>
+                    <a href="https://netflix.shop/" target="blank">
+                        <li>Netflix Shop</li>
+                        </a>
+                        <a href="https://www.netflix.com/Cookies" target="blank">
+
+                        <li>Cookie Preferences</li>
+                        </a>
+
+
+                    </ul>
+                </div>
+
+
+                <div>
+                    <ul>
+                    <a href="https://media.netflix.com/" target="blank">
+                        <li>Media Center</li>
+                        </a>
+                        <a href="https://help.netflix.com/legal/termsofuse" target="blank">
+                    
+                        <li>Terms of Use</li>
+                        </a>
+                        <a href="https://help.netflix.com/legal/corpinfo" target="blank">
+
+                        <li>Corporate Information</li>
+                        </a>
+                    </ul>
+
+                </div>
+
+                <div className="Service">
+                    <p> Service Code</p>
+                    
+
+                </div>
+                <span className="paragraphe">© 1997-2023 Netflix, Inc</span>
+                
+
             
+            
+
+                {
+            
+                
+                 }
+        </div>
+             
                 
             
             

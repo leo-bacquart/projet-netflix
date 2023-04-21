@@ -1,5 +1,6 @@
 import styled, {createGlobalStyle} from "styled-components";
 
+
 export const HeaderWrapper = styled.div`
     display: flex;
     height: 70px;
@@ -60,22 +61,11 @@ export const MoviePoster = styled.li`
  export const Nav = styled.nav`
  display:flex;
  justify-content: space-between;
- .liste1{
-  
-  
-  
-  
- }
- .liste2{
-  
 
- }
-
- .liste3{
-  
+ 
 
 
- }
+
 
 
 
