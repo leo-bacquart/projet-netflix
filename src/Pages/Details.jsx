@@ -25,6 +25,7 @@ const Details = () => {
         <div className={'details'}>
             <img src={backdropImg} alt="backdrop"/>
             <h1>{movie.title}</h1>
+            <div className={'gradient'}/>
         </div>
 
 
