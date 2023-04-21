@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"; // Importer le module axios pour effectuer des requêtes HTTP
 import '../style/Search.scss'
 import loupe from '../assets/loupe.svg';
 
@@ -20,30 +19,6 @@ function SearchBar() {
   function handleClose() {
     setIsOpen(false);
   }
-
-  const fetchSearch = (query) => {
-    fetch(`${API.ID}search/movie?api_key=${API.KEY}&query=${query}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setSearchResults(data.results)
-        console.log(data.results)
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  };
-
-  useEffect(() => {
-    fetch(`${API.ID}search/movie?api_key=${API.KEY}&query=${searchTerm}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setSearchResults(data.results)
-        console.log(data.results)
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }, [searchTerm]);
 
   // Rendu des résultats de recherche
   const resultList = searchResults.map(result => (
