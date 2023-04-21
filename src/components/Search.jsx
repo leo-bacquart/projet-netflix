@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import '../style/Search.scss'
 import loupe from '../assets/loupe.svg';
+import { useNavigate } from "react-router-dom";
 
-function SearchBar({ onSearch }) {
+
+function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   function handleSearch(event) {
     setSearchTerm(event.target.value);
-    onSearch(event.target.value);
   }
 
   function handleOpen() {
@@ -20,7 +21,7 @@ function SearchBar({ onSearch }) {
   }
 
   return (
-    <div class="Search">
+    <div className="Search">
       {isOpen ? (
         <div>
           <input
