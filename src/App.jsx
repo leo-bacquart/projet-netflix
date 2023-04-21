@@ -13,6 +13,7 @@ import Nouveautes from "./Pages/Nouveautes.jsx";
 import List from "./components/MovieCarousel.jsx";
 import Liste from "./Pages/Liste.jsx";
 import NotFound from "./Pages/NotFound.jsx";
+import Details from "./Pages/Details.jsx";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
                     <Route path={'films'} element={<Films/>}/>
                     <Route path={'new'} element={<Nouveautes/>}/>
                     <Route path={'list'} element={<Liste/>}/>
+                    <Route path={'details/:movie_id'} element={<Details/>}/>
                     <Route path={'*'} element={<NotFound/>}/>
 
                 </Route>
