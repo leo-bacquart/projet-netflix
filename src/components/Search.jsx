@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios"; // Importer le module axios pour effectuer des requêtes HTTP
 import '../style/Search.scss'
 import loupe from '../assets/loupe.svg';
-import * as API from './callAPI'
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -10,8 +9,8 @@ function SearchBar() {
   const [searchResults, setSearchResults] = useState([]);
 
   function handleSearch(event) {
-    const query = event.target.value;
-    setSearchTerm(query);
+    setSearchTerm(event.target.value);
+    onSearch(event.target.value);
   }
 
   function handleOpen() {
