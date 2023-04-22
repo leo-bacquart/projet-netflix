@@ -6,7 +6,6 @@
 
   nav {
     margin: 0 50px;
-    margin-right: +10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,10 +50,9 @@
       border: none;
 
      img{
-
       width: 30px;
       height: 30px;
-
+      border-radius: 7px;
      }
 
     }
@@ -63,6 +61,50 @@
     .dropdown-menu{
       display: block;
       position: absolute;
+      right: 20px;
+      margin: 5px;
+      padding: 5px;
+      background: rgba(0, 0, 0, 0.8);
+
+      li {
+         display: flex;
+         padding: 0;
+         background: none;
+
+
+
+        img{
+          width: 20px;
+          margin: 0 10px 0 10px;
+          background: none;
+         }
+        
+        .jeunesse{
+          width: 25px;
+          margin: 0 10px 0 10px;
+          background: none;
+        }
+
+         a{
+          display: flex;
+          margin: auto 0 auto ;
+          background: none;
+         }
+      }
+      
+      
+    }
+
+    .logout{
+      border-top: 1px solid white;
+      text-align: center;
+      background: none;
+      padding: 10px;
+
+      a{
+        text-decoration: none; 
+        background: none;
+      }
     }
   
 
