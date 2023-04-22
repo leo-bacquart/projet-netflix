@@ -22,17 +22,15 @@ const Details = () => {
     const backdropImg = `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
 
     return (
+        <>
         <div className={'details'}>
             <img src={backdropImg} alt="backdrop"/>
-<<<<<<< HEAD
-            <h1>{movie.title}</h1>
-            <p>{movie.overview}</p>
-=======
->>>>>>> 51785e3ed362fb184ec41d3ca21d9fa0e1963d32
             <div className={'gradient'}/>
             <h1>{movie.title}</h1>
+            <p>{movie.overview}</p>
 
         </div>
+        </>
 
 
     )
