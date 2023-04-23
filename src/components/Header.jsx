@@ -9,6 +9,7 @@ import SearchBar from "./Search";
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
+  const [searchResults, setSearchResults] = React.useState([]);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -35,7 +36,7 @@ const Header = () => {
             <Link to="/list">Ma liste</Link>
           </li>
         </ul>
-        <SearchBar/>
+
 
         <a href="#" className="notifs">
           <img src={bell} alt="Notifications"></img>

@@ -26,7 +26,7 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
         <div className={'carousel'}>
             <h2>{children}</h2>
             <ul>
-                {movieList.map((movie) => <Item key={movie.key} movie={movie}/> )} {/* Création d'une instance movie par partie du tableau */}
+                {movieList.map((movie) => <Item key={movie.id} movie={movie}/> )} {/* Création d'une instance movie par partie du tableau */}
             </ul>
         </div>
     )
@@ -36,7 +36,7 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
 const Item = ({movie}) => (
     <li>
         <Link to={`details/${movie.id}`}>
-            <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> {/*Récupération de l'affiche*/}
+            <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.id + "poster"}/> {/*Récupération de l'affiche*/}
         </Link>
     </li>
 )
