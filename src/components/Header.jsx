@@ -4,6 +4,11 @@ import '../style/Header.scss'
 import {HeaderLi, HeaderUl, HeaderWrapper} from "../style/Style.jsx";
 import logo from '../assets/Netflix_logo.svg';
 import bell from '../assets/notifications.svg';
+import kids from '../assets/Netflix_jeunesse.svg';
+import pen from '../assets/pen.svg';
+import profil_info from '../assets/profile.svg';
+import transfert from '../assets/transfer.svg';
+import help from '../assets/help.svg';
 import profile from '../assets/profile_icon.png';
 import SearchBar from "./Search";
 
@@ -47,9 +52,29 @@ const Header = () => {
           </button>
           {dropdownOpen && (
             <ul className="dropdown-menu" id="dropdown-menu">
-              <li><a href="#">Option 1</a></li>
-              <li><a href="#">Option 2</a></li>
-              <li><a href="#">Option 3</a></li>
+              <li>
+                <img className={'jeunesse'} src={kids} alt="Profil jeunesse"></img>
+                <a href="#">Jeunesse</a>
+              </li>
+              <li>
+                <img src={pen} alt="Gestion des profils"></img>
+                <a href="#">Gérer les profils</a>
+              </li>
+              <li>
+                <img src={transfert} alt="Transfert d'un profile"></img>
+                <a href="#">Transférer un profil</a>
+              </li>
+              <li>
+                <img src={profil_info} alt="Infos profile"></img>
+                <a href="#">Compte</a>
+              </li>
+              <li>
+                <img src={help} alt="Centre d'assistance"></img>
+                <a href="#">Centre d'assistance</a>
+              </li>
+              <div className="logout" >
+              <a href="#">Déconnexion</a>
+              </div>
             </ul>
           )}
         </div>

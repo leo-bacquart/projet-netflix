@@ -1,9 +1,10 @@
 import * as React from "react";
+import Series from "../components/Series.jsx";
 
-const Series = () => {
+const SeriePage = () => {
     return (
-        <p>Element</p>
+        <Series params={'/tv/popular'}>Popular TV Shows</Series>
     )
 }
 
-export default Series;
+export default SeriePage;

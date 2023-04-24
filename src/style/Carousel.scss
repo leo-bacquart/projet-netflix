@@ -6,9 +6,9 @@
 
   h2 {
     height: 7%;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
-    margin-left:10px;
+    margin-left:15px;
   }
 /*transformation du tag ul en .ul*/
   .ul {
@@ -16,11 +16,11 @@
     height: 90%;
     overflow-x: scroll;
     overflow-y: hidden;
-    -ms-overflow-style: none; /* hide scrollbar for IE and Edge */
-    scrollbar-width: none; /* hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* cacher la scrollbar pour Edge */
+    scrollbar-width: none; /* cacher la scrollbar pour Firefox */
 
     &::-webkit-scrollbar {
-      display: none; /* hide scrollbar for WebKit-based browsers */
+      display: none; /* cacher la scrollbar sur WebKit */
     }
     & > ul > li {
       // width: 308px !important;
