@@ -63,7 +63,6 @@
       position: absolute;
       right: 20px;
       margin: 5px;
-      padding: 5px;
       background: rgba(0, 0, 0, 0.8);
 
       li {
@@ -87,7 +86,7 @@
 
          a{
           display: flex;
-          margin: auto 0 auto ;
+          margin: auto 10px auto 0px;
           background: none;
          }
       }
