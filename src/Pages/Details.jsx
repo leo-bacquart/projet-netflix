@@ -2,7 +2,8 @@ import * as React from "react";
 import {useParams} from "react-router-dom";
 import * as API from "../components/callAPI.jsx";
 import '../style/Details.scss';
-import List from "../components/RelatedFilms.jsx";
+//import List from "../components/RelatedFilms.jsx";
+import List from "../components/MovieCarousel.jsx";
 
 const Details = () => {
     const { movie_id } = useParams();

@@ -57,8 +57,8 @@ return (
                 style={{transition: 'none 0s ease 0s', overflow: "'", transform: 'translate3d(0px, 0px, 0px)'}}>
                 {movieList.map((movie) => <Item key={movie.id} movie={movie}/> )} 
                 </ul>
-                    <button aria-label="Go to previous slide" class="react-multiple-carousel__arrow react-multiple-carousel__arrow--left " type="button"></button>
-            <button aria-label="Go to next slide" class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right " type="button"></button>
+                    <button aria-label="Go to previous slide" className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left " type="button"></button>
+            <button aria-label="Go to next slide" className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right " type="button"></button>
             </div>
 {/*         
             <Carousel responsive={responsive} className={'ul'}>               
@@ -91,7 +91,7 @@ const Item = ({movie}) => {
             estSurvol === false 
             ?
                 <>  
-                <Link to={`details/${movie.id}`}>
+                <Link to={`/details/${movie.id}`} onClick={()=>window.location.href(`/details/${movie.id}`)}>
                     <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> 
                 </Link>
             </> 
@@ -104,11 +104,11 @@ const Item = ({movie}) => {
                   
                  }}>
               
-                 <Link to={`details/${movie.id}`} >
+                 <Link to={`/details/${movie.id}`} onClick={()=>window.location.href(`/details/${movie.id}`)}>
                     <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}
                     style={{
                         width: '100%',
-                        objectFit: 'fill',
+                        objectFit: 'cover',
                         padding: 0
                      }}
                     /> 

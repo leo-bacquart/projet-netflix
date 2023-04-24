@@ -26,7 +26,7 @@ function App() {
                     <Route path={'films'} element={<Films/>}/>
                     <Route path={'new'} element={<Nouveautes/>}/>
                     <Route path={'list'} element={<Liste/>}/>
-                    <Route path={'details/:movie_id'} element={<Details/>}/>
+                    <Route exact path={'details/:movie_id'} element={<Details/>}/>
                     <Route path={'*'} element={<NotFound/>}/>
 
                 </Route>
