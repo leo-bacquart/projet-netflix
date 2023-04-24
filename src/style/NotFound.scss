@@ -1,3 +1,39 @@
-.pageErreur{
-    background-image: url(NotFoundImg);
-}
+.PageErreur {
+    position: relative;
+    }
+    
+    h2 {
+    position: absolute;
+    font-size: 50px;
+    top: 5%;
+    left: 5%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1;
+    background: none;
+    }
+    
+    .PageErreur img {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    }
+
+    h1{
+    font-size: 60px;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    right: 5%;
+    background: none;
+    }
+    
+    p{
+    font-size: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    right: 5%;
+    background: none;
+    }
