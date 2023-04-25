@@ -18,7 +18,7 @@ const Details = () => {
             .catch((error) => {
                 console.log(error.message);
             });
-    }, [])
+    }, [movie_id])
 
     const backdropImg = `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
 

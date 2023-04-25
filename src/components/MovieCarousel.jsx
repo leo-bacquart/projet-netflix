@@ -108,7 +108,7 @@ const Item = ({movie}) => {
                     <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}
                     style={{
                         width: '100%',
-                        objectFit: 'cover',
+                        objectFit: 'fill',
                         padding: 0
                      }}
                     /> 

@@ -22,8 +22,11 @@ const Header = () => {
   return (
     <div className={'headerWrapper'}>
       <nav>
-        <img src={logo} alt="Netflix logo"></img>
+        
         <ul>
+          <li>
+          <Link to="/"><img src={logo} alt="Netflix logo"></img></Link>
+          </li>
           <li>
             <Link to="/">Accueil</Link>
           </li>
