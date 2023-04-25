@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 40;
+  z-index: 10000;
 
   nav {
     margin: 0 50px;
@@ -22,7 +22,9 @@
       flex-grow: 2;
 
       li {
-        padding: 10px;
+
+        padding: 0%;
+        
 
         a {
           text-decoration: none;

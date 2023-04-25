@@ -23,26 +23,31 @@ const Header = () => {
     <div className={'headerWrapper'}>
       <nav>
         
-        <ul>
-          <li>
-          <Link to="/"><img src={logo} alt="Netflix logo"></img></Link>
-          </li>
-          <li>
-            <Link to="/">Accueil</Link>
-          </li>
-          <li>
-            <Link to="/series">Séries</Link>
-          </li>
-          <li>
-            <Link to="/films">Films</Link>
-          </li>
-          <li>
-            <Link to="/new">Nouveautés les plus regardées</Link>
-          </li>
-          <li>
-            <Link to="/list">Ma liste</Link>
-          </li>
-        </ul>
+       <ul>
+            <li>
+            <Link to="/"><img src={logo} alt="Netflix logo"></img></Link>
+            </li>
+            {/* 
+            <li>
+              <Link to="/">Accueil</Link>
+            </li>
+            <li>
+              <Link to="/series">Séries</Link>
+            </li>
+            <li>
+              <Link to="/films">Films</Link>
+            </li>
+            <li>
+              <Link to="/new">Nouveautés les plus regardées</Link>
+            </li>
+            <li>
+              <Link to="/list">Ma liste</Link>
+            </li>
+           */}
+       </ul> 
+        
+        
+        
         <SearchBar/>
 
         <a href="#" className="notifs">

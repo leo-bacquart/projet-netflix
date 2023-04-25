@@ -21,7 +21,7 @@ function SearchBar() {
     setSearchInProgress(true);
     setTimeout(()=>{
       searchMovies();
-    }, 3000);
+    }, 1000);
 
   }, [searchTerm])
 
