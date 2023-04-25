@@ -4,6 +4,9 @@ import * as API from "../components/callAPI.jsx";
 import '../style/Details.scss';
 //import List from "../components/RelatedFilms.jsx";
 import List from "../components/MovieCarousel.jsx";
+import PlayButton from "../components/PlayButton.jsx"
+
+
 
 const Details = () => {
     const { movie_id } = useParams();
@@ -28,7 +31,11 @@ const Details = () => {
             <img src={backdropImg} alt="backdrop"/>
             <div className={'gradient'}/>
             <h1>{movie.title}</h1>
-            <p>{movie.overview}</p>
+            <p>{movie.overview}
+                <PlayButton></PlayButton>
+            </p>
+            
+            
         </div>
         <List params={`/movie/${movie_id}/similar?api_key=${API.KEY}&language=fr`}>Films associés</List>
         </>
