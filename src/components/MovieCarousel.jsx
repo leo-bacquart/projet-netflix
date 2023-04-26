@@ -54,8 +54,8 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
 
     const next = () => {
         setIsTransition(true)
-        if(transitionPx <= -3281) {
-            setTransitionPx(-3281)
+        if(transitionPx <= -3051) {
+            setTransitionPx(-3051)   /* Pour definir une limite */
         }else {
             setTransitionPx(transitionPx - 193)
         }
@@ -89,13 +89,8 @@ return (
                 style={isTransition === false ?  transitionDisabled : transitionEnabled}>
                 {movieList.map((movie) => <Item key={movie.id} movie={movie}/> )} 
                 </ul>
-<<<<<<< Updated upstream
-                    <button aria-label="Go to previous slide" className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left " type="button"></button>
-            <button aria-label="Go to next slide" className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right " type="button"></button>
-=======
                     <button onClick={prev} aria-label="Go to previous slide" class="react-multiple-carousel__arrow react-multiple-carousel__arrow--left " type="button"></button>
                     <button onClick={next} aria-label="Go to next slide" class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right " type="button"></button>
->>>>>>> Stashed changes
             </div>
 {/*         
             <Carousel responsive={responsive} className={'ul'}>               
@@ -121,313 +116,137 @@ const Item = ({movie}) => {
     React.useEffect(() => {
         setEstSurvol(estSurvol)
     }, [estSurvol])
-    const handleMouseEnter = () => {
-        setEstSurvol(true);
-      }
-    
-      const handleMouseLeave = () => {
-        setEstSurvol(false);
-      }
-    //onMouseEnter={handleMouseEnter} ;onMouseLeave={handleMouseLeave}
-    console.log(movie);
+    const handleMouseEnter = () => setEstSurvol(true);
+      
+      const handleMouseLeave = () => setEstSurvol(false);
+      
+    //   onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+    console.log(movie)
     return ( 
         <li className={!estSurvol ? 'react-multi-carousel-item react-multi-carousel-item--active li' : 'react-multi-carousel-item react-multi-carousel-item--active li li--box-shadow'} key={movie.key} 
         style={{flex: '1 1 auto', position: 'relative'}} aria-hidden="false" data-index="0"  
+        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
         >
-<<<<<<< Updated upstream
-           {
-            estSurvol === false 
-            ?
-                <>  
-                <Link to={`/details/${movie.id}`} onClick={()=>window.location.href(`/details/${movie.id}`)}>
-                    <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> 
-                </Link>
-            </> 
-            :
-            <div style={{
-                width: "100%",
-              
-                 padding: 0,
-                  borderRadius: '8px'
-                  
-                 }}>
-              
-                 <Link to={`/details/${movie.id}`} onClick={()=>window.location.href(`/details/${movie.id}`)}>
-                    <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}
-                    style={{
-                        width: '100%',
-                        objectFit: 'fill',
-                        padding: 0
-                     }}
-                    /> 
-                </Link>
-                <div style={{padding: '1em',    borderRadius: '8px', height: 'auto'}}>
-                    {/*             BUTTON               */}
-                    <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                        <div>
-                                <button style={{
-                                    border: 'none',
-                                    cursor: 'pointer'
-                                }}>
-                                    <PlayCircleIcon />
-                                </button>
-                                <button
-                                style={{
-                                    border: 'none',
-                                    cursor: 'pointer'
-                                }}
-                                >
-                                <AddCircleOutlineIcon />
-                                 
-                                </button>
-                                <button
-                                style={{
-                                    border: 'none',
-                                    cursor: 'pointer'
-                                }}
-                                >
-                                <ThumbUpOffAltIcon />
-                                </button>
-                        </div>
-                        <div>
+         {
+                   estSurvol === false 
+                   ?
+                       <Link to={`details/${movie.id}`}>
+                           <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> 
+                       </Link>
+                   :
+                   <div style={{
+                    width: "200px",
+                    boxShadow: '0px 3px 10px #282727',
+                    padding: 0,
+                    borderRadius: '8px',
+                    maxWidth: '200px'
+                    }}>
+                    <Link to={`details/${movie.id}`} >
+                        <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}
+                        style={{
+                            width: '100%',
+                            objectFit: 'fill',
+                            padding: 0
+                        }}
+                        /> 
+                    </Link>
+                    <div style={{padding: '1em', borderRadius: '8px', height: 'auto'}}>
+                            <h3 style={{marginBottom: '8px'}}>{movie.title}</h3>
+                        {/*             BUTTON               */}
+                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                            <div>
+                                    <button style={{
+                                        border: 'none',
+                                        cursor: 'pointer'
+                                    }}>
+                                        <PlayCircleIcon />
+                                    </button>
                                     <button
                                     style={{
                                         border: 'none',
                                         cursor: 'pointer'
                                     }}
                                     >
-                                    <KeyboardArrowDownIcon />
+                                    <AddCircleOutlineIcon />
+                                    
                                     </button>
+                                
+                                    
+                                    <button onClick={() => swapIcon(movie.id)}
+                                    style={{
+                                        border: 'none',
+                                        cursor: 'pointer'
+                                    }}
+                                    >
+                                        {isLiked(movie.id) ? <ThumbUpOffAltIcon/>: <ThumbUpAltIcon/>}
+                                    
+            
+                                    </button>
+                            </div>
+                            <div>
+                                        <button
+                                        style={{
+                                            border: 'none',
+                                            cursor: 'pointer'
+                                        }}
+                                        >
+                                        <KeyboardArrowDownIcon />
+                                        </button>
+                            </div>
+                        </div>
+                        <div style={{  margin: '16px 0 16px 0'}}>
+                            <p style={{
+                                color: '#46D369',
+                                fontSize: '14px',
+                            
+                            }}>Recommandé à { (movie.vote_average * 10).toFixed(0)}% </p>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '8px 0 8px 0'}}>
+                            <p
+                            style={{
+                                border: '1px solid white',
+                                padding: '2px',
+                                fontSize: '13px',
+                                width: '24px'
+                            }}  
+                            >16+</p>
+                            <p>16 Episodes <span 
+                            style={{
+                                border: '1px solid white',
+                                padding: '2px',
+                                borderRadius: '4px',
+                                padding: '0 4px 0 4px'
+                            }} 
+                            >HD</span></p>
+                            </div>
+                    
+                        </div>
+                        <div style={{display: 'flex', alignItems: 'center'}}>
+                            <p>Sombre</p>
+                            <span style={{
+                                height: '8px',
+                                width: '8px',
+                                backgroundColor: '#646464',
+                                borderRadius: '100px',
+                                margin: '0 4px 0 4px'
+                            }}></span>
+                            <p>Drame</p>
+                            <span style={{
+                                height: '8px',
+                                width: '8px',
+                                backgroundColor: '#646464',
+                                borderRadius: '100px',
+                                margin: '0 4px 0 4px'
+                            }}></span>
+                            <p>Vengeance</p>
                         </div>
                     </div>
-                    <div style={{display: 'flex', alignItems: 'center', margin: '16px 0 16px 0'}}>
-                        <p style={{
-                            color: '#46D369',
-                            fontSize: '16px',
-                         
-                        }}>Recommandé à { (movie.vote_average * 10).toFixed(0)}% </p>
-                        <p
-=======
-          <div style={{
-        width: "100%",
-        boxShadow: '0px 3px 10px #282727',
-         padding: 0,
-          borderRadius: '8px'
+            </div>
+            }
           
-         }}>
-         <Link to={`details/${movie.id}`} >
-            <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}
-            style={{
-                width: '100%',
-                objectFit: 'fill',
-                padding: 0
-             }}
-            /> 
-        </Link>
-        <div style={{padding: '1em',    borderRadius: '8px', height: 'auto', position: 'relative',
-top: '-132px'}}>
-                <h3 style={{marginBottom: '8px'}}>{movie.title}</h3>
-            {/*             BUTTON               */}
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <div>
-                        <button style={{
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}>
-                            <PlayCircleIcon />
-                        </button>
-                        <button
->>>>>>> Stashed changes
-                        style={{
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}
-                        >
-                        <AddCircleOutlineIcon />
-                         
-                        </button>
-                    
-                        
-                        <button onClick={() => swapIcon(movie.id)}
-                        style={{
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}
-                        >
-                            {isLiked(movie.id) ? <ThumbUpOffAltIcon/>: <ThumbUpAltIcon/>}
-                        
-   
-                        </button>
-                </div>
-                <div>
-                            <button
-                            style={{
-                                border: 'none',
-                                cursor: 'pointer'
-                            }}
-                            >
-                            <KeyboardArrowDownIcon />
-                            </button>
-                </div>
-            </div>
-            <div style={{  margin: '16px 0 16px 0'}}>
-                <p style={{
-                    color: '#46D369',
-                    fontSize: '14px',
-                 
-                }}>Recommandé à { (movie.vote_average * 10).toFixed(0)}% </p>
-                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '8px 0 8px 0'}}>
-                <p
-                style={{
-                    border: '1px solid white',
-                    padding: '2px',
-                    fontSize: '13px',
-                    width: '24px'
-                }}  
-                >16+</p>
-                <p>16 Episodes <span 
-                  style={{
-                    border: '1px solid white',
-                    padding: '2px',
-                    borderRadius: '4px',
-                    padding: '0 4px 0 4px'
-                }} 
-                >HD</span></p>
-                </div>
-           
-            </div>
-            <div style={{display: 'flex', alignItems: 'center'}}>
-                <p>Sombre</p>
-                <span style={{
-                    height: '8px',
-                    width: '8px',
-                    backgroundColor: '#646464',
-                    borderRadius: '100px',
-                    margin: '0 4px 0 4px'
-                }}></span>
-                <p>Drame</p>
-                <span style={{
-                    height: '8px',
-                    width: '8px',
-                    backgroundColor: '#646464',
-                    borderRadius: '100px',
-                    margin: '0 4px 0 4px'
-                }}></span>
-                <p>Vengeance</p>
-            </div>
-        </div>
-    </div>
-        </li>}
-estSurvol===false ?
-        <>  
-        <Link to={`details/${movie.id}`}>
-            <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> 
-        </Link>
-    </> 
-    :
-    <div style={{
-        width: "100%",
       
-         padding: 0,
-          borderRadius: '8px'
-          
-         }}>
-      
-         <Link to={`details/${movie.id}`} >
-            <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}
-            style={{
-                width: '100%',
-                objectFit: 'fill',
-                padding: 0
-             }}
-            /> 
-        </Link>
-        <div style={{padding: '1em',    borderRadius: '8px', height: 'auto'}}>
-            {/*             BUTTON               */}
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                <div>
-                        <button style={{
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}>
-                            <PlayCircleIcon />
-                        </button>
-                        <button
-                        style={{
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}
-                        >
-                        <AddCircleOutlineIcon />
-                         
-                        </button>
-                        <button
-                        style={{
-                            border: 'none',
-                            cursor: 'pointer'
-                        }}
-                        >
-                        <ThumbUpOffAltIcon />
-                        </button>
-                </div>
-                <div>
-                            <button
-                            style={{
-                                border: 'none',
-                                cursor: 'pointer'
-                            }}
-                            >
-                            <KeyboardArrowDownIcon />
-                            </button>
-                </div>
-            </div>
-            <div style={{display: 'flex', alignItems: 'center', margin: '16px 0 16px 0'}}>
-                <p style={{
-                    color: '#46D369',
-                    fontSize: '16px',
-                 
-                }}>Recommandé à { (movie.vote_average * 10).toFixed(0)}% </p>
-                <p
-                style={{
-                    border: '1px solid white',
-                    padding: '2px',
-                    fontSize: '15px',
-                    marginRight: '8px',
-                    marginLeft: '8px'
-                }}  
-                >16+</p>
-                <p>16 Episodes <span 
-                  style={{
-                    border: '1px solid white',
-                    padding: '2px',
-                    borderRadius: '4px',
-                    padding: '0 4px 0 4px'
-                }} 
-                >HD</span></p>
-            </div>
-            <div style={{display: 'flex', alignItems: 'center'}}>
-                <p>Sombre</p>
-                <span style={{
-                    height: '8px',
-                    width: '8px',
-                    backgroundColor: '#646464',
-                    borderRadius: '100px',
-                    margin: '0 4px 0 4px'
-                }}></span>
-                <p>Drame</p>
-                <span style={{
-                    height: '8px',
-                    width: '8px',
-                    backgroundColor: '#646464',
-                    borderRadius: '100px',
-                    margin: '0 4px 0 4px'
-                }}></span>
-                <p>Vengeance</p>
-            </div>
-        </div>
-    </div>
- 
-)
+        </li>
+    )
 }
+
 export default List
 
