@@ -37,7 +37,8 @@ const Details = () => {
             
             
         </div>
-        <List params={`/movie/${movie_id}/similar?api_key=${API.KEY}&language=fr`}>Films associés</List>
+        <List params={`/movie/${movie_id}/similar?api_key=${API.KEY}&language=fr`}>Films associés</List> 
+        
         </>
     )
 }
