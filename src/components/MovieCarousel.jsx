@@ -89,8 +89,8 @@ return (
                 style={isTransition === false ?  transitionDisabled : transitionEnabled}>
                 {movieList.map((movie) => <Item key={movie.id} movie={movie}/> )} 
                 </ul>
-                    <button onClick={prev} aria-label="Go to previous slide" class="react-multiple-carousel__arrow react-multiple-carousel__arrow--left " type="button"></button>
-                    <button onClick={next} aria-label="Go to next slide" class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right " type="button"></button>
+                    <button onClick={prev} aria-label="Go to previous slide" className="react-multiple-carousel__arrow react-multiple-carousel__arrow--left " type="button"></button>
+                    <button onClick={next} aria-label="Go to next slide" className="react-multiple-carousel__arrow react-multiple-carousel__arrow--right " type="button"></button>
             </div>
 {/*         
             <Carousel responsive={responsive} className={'ul'}>               

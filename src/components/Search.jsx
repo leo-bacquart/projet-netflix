@@ -10,6 +10,7 @@ function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchInProgress, setSearchInProgress] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isEditing, setEditing]= useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const { setValue, value } = useComboboxControls({ initialValue: '' });
   const navigate = useNavigate();
@@ -26,16 +27,20 @@ function SearchBar() {
   }, [searchTerm])
 
   function searchMovies(){
-    if (!searchTerm){ setSearchInProgress(false); return; }
+    if (!searchTerm){ 
+      setSearchResults([]);
+      setSearchInProgress(false);
+      return;
+    }
     console.info('✅ searching for movies');
     const text = searchTerm;
     const url = `https://api.themoviedb.org/3/search/movie?api_key=5c0913b3a2bf3d6729475eaa432c0034&language=en-US&query=${text}&page=1&include_adult=false`;
     fetch(url)
     .then((res)=> res.json())
     .then(response=>{
-      console.log('Got response:', response);
-      // const resultList = response.results;
-      setSearchResults(response.results);
+      const only10Results = response.results.slice(0, 10);
+      console.log('Got only10Results:', only10Results);
+      setSearchResults(only10Results);
     })
     .finally(()=>{
       setSearchInProgress(false);
@@ -64,19 +69,20 @@ function SearchBar() {
   //   </option>
   // ));
 
-  const searchResultList = useMemo(()=> searchResults.map(r=> ({ id: r.id, value: r.title })));
+  const searchResultList = useMemo(()=> searchResults.map(r=> ({ id: r.id, value: r.title })), [searchResults]);
+ // setSearchTerm(searchTerm)
   
-  console.log('results List:', searchResultList)
+  console.log('results List:', { isEditing, isOpen, searchResultList})
   return (
     <div className="Search">
       {isOpen ? (
         <div style={({border: "1px solid white"})}>
-          <DatalistInput
+          {/* <DatalistInput
             placeholder="Titres, personne, genre..."
             value={searchTerm}
             setValue={setValue}
             showLabel={false}
-            // isExpanded={isOpen}
+            isExpanded={isOpen}
             onSelect={(item) => {
               setValue(''); // clearing input field
               navigate('/details/'+item.id);
@@ -84,7 +90,47 @@ function SearchBar() {
             }}
             items={searchResultList}
             onChange={handleSearch}
-          />
+          /> */}
+            <form className='autocomplete-container'>
+              <div
+                className='autocomplete'
+                role='combobox'
+                aria-expanded='false'
+                aria-owns='autocomplete-results'
+                aria-haspopup='listbox'
+              >
+                <input
+                  className='autocomplete-input'
+                  placeholder='Rechercher un titre'
+                  aria-label='Rechercher un titre'
+                  aria-autocomplete='both'
+                  aria-controls='autocomplete-results'
+                  onFocus={()=> { setEditing(true)}}
+                  onBlur={(e)=> {
+                    console.log('editing is now false')
+                     e.preventDefault();
+                      setTimeout(()=> {setEditing(false); }, 500); 
+                    }}
+                  value={searchTerm}
+                  onChange={handleSearch}
+                />
+              </div>
+              {isEditing && <ul
+                id='autocomplete-results'
+                className={`autocomplete-results autocomplete-results-ul ${isEditing ? 'hidden' : ''}`} 
+                role='listbox'
+                aria-label='Rechercher un titre'
+              >
+                {searchResultList.map(item=> <li key={item.id} className="autocomplete-result-item"><div onClick={(e)=>{ 
+                  e.preventDefault();
+                  console.log('clicked on something')
+                  navigate('/details/'+item.id); 
+                  }} >{item.value}</div></li>)}
+                {/* <li class="autocomplete-result-item"><div >test</div></li>
+                <li class="autocomplete-result-item"><div >test</div></li>
+                <li class="autocomplete-result-item"><div >test</div></li> */}
+              </ul>}
+            </form>
           {/* <input
             list="movies-list"
             type="text"
