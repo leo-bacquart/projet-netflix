@@ -101,7 +101,6 @@ return (
 }
 
 
-
 const Item = ({movie}) => {
     const [estSurvol, setEstSurvol] = React.useState(false);
     React.useEffect(() => {
@@ -112,11 +111,10 @@ const Item = ({movie}) => {
       const handleMouseLeave = () => setEstSurvol(false);
       
     //   onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
-    const [likedFilm, setLikedFilm] = useState(false); //declarer une variable d'etat poiur memoriser si un film est like (false par defaut)
+    const [likedFilm, setLikedFilm] = React.useState(false); //declarer une variable d'etat poiur memoriser si un film est like (false par defaut)
     const reverseLike = () => {
             setLikedFilm(!likedFilm);
     };
-    console.log(movie)
     return ( 
         <li className={!estSurvol ? 'react-multi-carousel-item react-multi-carousel-item--active li' : 'react-multi-carousel-item react-multi-carousel-item--active li li--box-shadow'} key={movie.key} 
         style={{flex: '1 1 auto', position: 'relative'}} aria-hidden="false" data-index="0"  
