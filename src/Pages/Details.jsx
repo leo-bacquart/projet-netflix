@@ -2,7 +2,6 @@ import * as React from "react";
 import {useParams} from "react-router-dom";
 import * as API from "../components/callAPI.jsx";
 import '../style/Details.scss';
-//import List from "../components/RelatedFilms.jsx";
 import List from "../components/MovieCarousel.jsx";
 import PlayButton from "../components/PlayButton.jsx"
 
@@ -37,8 +36,7 @@ const Details = () => {
             
             
         </div>
-        <List params={`/movie/${movie_id}/similar?api_key=${API.KEY}&language=fr`}>Films associés</List> 
-        
+        <List params={`/movie/${movie_id}/similar?api_key=${API.KEY}&language=fr`}>Films associés</List>
         </>
     )
 }
