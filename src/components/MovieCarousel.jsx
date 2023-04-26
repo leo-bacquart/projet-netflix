@@ -100,16 +100,7 @@ return (
     )
 }
 
-  const swapIcon = (id) => {
-    console.log(localStorage.getItem(""+id)!=null);
-    localStorage.setItem(""+id, "true"); 
-    
-  };
 
-  const isLiked = (id) =>{
-    console.log(localStorage.getItem(""+id)!=null);
-    return localStorage.getItem(""+id)!=null;
-  };
 
 const Item = ({movie}) => {
     const [estSurvol, setEstSurvol] = React.useState(false);
@@ -121,6 +112,10 @@ const Item = ({movie}) => {
       const handleMouseLeave = () => setEstSurvol(false);
       
     //   onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+    const [likedFilm, setLikedFilm] = useState(false); //declarer une variable d'etat poiur memoriser si un film est like (false par defaut)
+    const reverseLike = () => {
+            setLikedFilm(!likedFilm);
+    };
     console.log(movie)
     return ( 
         <li className={!estSurvol ? 'react-multi-carousel-item react-multi-carousel-item--active li' : 'react-multi-carousel-item react-multi-carousel-item--active li li--box-shadow'} key={movie.key} 
@@ -172,13 +167,13 @@ const Item = ({movie}) => {
                                     </button>
                                 
                                     
-                                    <button onClick={() => swapIcon(movie.id)}
+                                    <button onClick={() => reverseLike()}
                                     style={{
                                         border: 'none',
                                         cursor: 'pointer'
                                     }}
                                     >
-                                        {isLiked(movie.id) ? <ThumbUpOffAltIcon/>: <ThumbUpAltIcon/>}
+                                        {!likedFilm ? <ThumbUpOffAltIcon/>: <ThumbUpAltIcon/>}
                                     
             
                                     </button>
