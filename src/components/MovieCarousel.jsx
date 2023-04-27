@@ -44,6 +44,7 @@ const List = ({params, children}) => { /* params = paramètres de recherche dans
         fetch(`${API.ID}${params}?api_key=${API.KEY}`) /* Lien d'appel de l'api */
             .then((response) => response.json())
             .then((data) => {
+            console.log(data)
                 
                 setMovieList(data.results);
             })
@@ -123,7 +124,7 @@ const Item = ({movie}) => {
          {
                    estSurvol === false 
                    ?
-                       <Link to={`details/${movie.id}`}>
+                       <Link to={`/details/${movie.id}`}>
                            <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}/> 
                        </Link>
                    :
@@ -134,7 +135,7 @@ const Item = ({movie}) => {
                     borderRadius: '8px',
                     maxWidth: '200px'
                     }}>
-                    <Link to={`details/${movie.id}`} >
+                    <Link to={`/details/${movie.id}`} >
                         <img src={"https://image.tmdb.org/t/p/w500/" + movie.poster_path} alt={movie.key + "poster"}
                         style={{
                             width: '100%',

@@ -27,7 +27,7 @@ function SearchBar() {
   }, [searchTerm])
 
   function searchMovies(){
-    if (!searchTerm){ 
+    if (!searchTerm){   // si l'input est vide
       setSearchResults([]);
       setSearchInProgress(false);
       return;
@@ -35,12 +35,12 @@ function SearchBar() {
     console.info('✅ searching for movies');
     const text = searchTerm;
     const url = `https://api.themoviedb.org/3/search/movie?api_key=5c0913b3a2bf3d6729475eaa432c0034&language=en-US&query=${text}&page=1&include_adult=false`;
-    fetch(url)
+    fetch(url)  // GET Http request
     .then((res)=> res.json())
-    .then(response=>{
-      const only10Results = response.results.slice(0, 10);
+    .then(responseJson=>{
+      const only10Results = responseJson.results.slice(0, 10); // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
       console.log('Got only10Results:', only10Results);
-      setSearchResults(only10Results);
+      setSearchResults(only10Results);  // on ajoute le tableau [] dans le state
     })
     .finally(()=>{
       setSearchInProgress(false);
@@ -125,11 +125,9 @@ function SearchBar() {
                 {searchResultList.map(item=> <li key={item.id} className="autocomplete-result-item"><div onClick={(e)=>{ 
                   e.preventDefault();
                   console.log('clicked on something')
+                  setSearchTerm('');  // vider l'input
                   navigate('/details/'+item.id); 
                   }} >{item.value}</div></li>)}
-                {/* <li class="autocomplete-result-item"><div >test</div></li>
-                <li class="autocomplete-result-item"><div >test</div></li>
-                <li class="autocomplete-result-item"><div >test</div></li> */}
               </ul>}
             </form>
           {/* <input
