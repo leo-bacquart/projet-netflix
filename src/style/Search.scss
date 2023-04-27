@@ -1,0 +1,132 @@
+.Search {
+    display: flex;
+    z-index: 40;
+  }
+
+  
+  .Search div {
+    display: flex;
+  }
+  
+  .Search div input {
+    width: 300px;
+    height: 35px;
+    background-color: black;
+    outline: none;
+    border: none;
+  }
+  
+  .Search button {
+    max-width: 30px;
+    height: 35px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+  }
+  
+  .Search button img.loupe-icon {
+    width: 25px;
+    height: 23px;
+  }
+
+  
+  // New style
+  
+.autocomplete-container {
+  position: relative;
+  height: 39px;
+}
+
+.autocomplete {
+  display: flex;
+  height: 39px;
+}
+
+
+.autocomplete-input {
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1;
+  height: 39px;
+}
+
+.autocomplete-submit {
+  border: 1px solid black;
+  padding: 8px 16px;
+  // background: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 39px;
+}
+
+.autocomplete-results-ul {
+  flex-direction: column;
+  // background-color: rgb(20, 20, 20);
+  
+  background: none;
+  background-color: black;
+}
+
+
+.autocomplete-submit svg {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.autocomplete-results {
+  position: absolute;
+  margin-top: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+  padding: 4px 0;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  transition: none;
+}
+
+.autocomplete-result-item {
+  margin-top: 10px;
+  padding-top: 10px;
+  background: none;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.autocomplete-result-item div {
+  
+  background: none;
+  background-color: black;
+}
+.autocomplete-result {
+  cursor: default;
+  padding: 4px 8px;
+}
+
+.autocomplete-result:hover {
+  // background: rgba(0, 0, 0, 0.12);
+}
+
+.autocomplete-result.selected {
+  // background: rgba(0, 0, 0, 0.12);
+}
+
+.search-result {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
