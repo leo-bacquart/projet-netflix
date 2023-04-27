@@ -1,39 +1,54 @@
 .carousel {
-  height: 300px;
+  // height: 300px;
+  height: auto;
   margin-top: 20px;
   margin-left: 30px;
 
   h2 {
     height: 7%;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
-    margin-left:10px;
+    margin-left:15px;
   }
-
-  ul {
+/*transformation du tag ul en .ul*/
+  .ul {
     display: flex;
     height: 90%;
     overflow-x: scroll;
     overflow-y: hidden;
-    -ms-overflow-style: none; /* hide scrollbar for IE and Edge */
-    scrollbar-width: none; /* hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* cacher la scrollbar pour Edge */
+    scrollbar-width: none; /* cacher la scrollbar pour Firefox */
 
     &::-webkit-scrollbar {
-      display: none; /* hide scrollbar for WebKit-based browsers */
+      display: none; /* cacher la scrollbar sur WebKit */
     }
-
-    li {
+    & > ul > li {
+      // width: 308px !important;
+      // max-width: 308px;
+    }
+/*transformation du tag li en .li*/
+    .li {
       height: 100%;
-
+      // width: 240px;
+      overflow: hidden;
+      &--box-shadow {
+        box-shadow: 0px 3px 10px #282727;
+        // width: 308px 
+    
+      }
+      
+/*on a modifier la height de limage*/
       img {
-        height: calc(100% - 20px);
+        //height: calc(100% - 20px);
+        height:270px;
         padding: 10px;
+          
         transition: transform 0.5s ease-in-out;
 
-        &:hover {
-          transform: scale(1.08);
-          transition: transform 0.5s ease-in-out;
-        }
+        // &:hover {
+        //   transform: scale(1.08);
+        //   transition: transform 0.5s ease-in-out;
+        // }
       }
     }
   }

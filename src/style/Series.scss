@@ -1,0 +1,19 @@
+.tv{
+
+    ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+     
+
+        li{
+        flex-basis: 29.5%;
+        margin: 10px;
+
+            img{
+            width: 100%;
+            height: auto;
+            }
+        }
+    }
+}
