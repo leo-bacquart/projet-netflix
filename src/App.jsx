@@ -4,6 +4,9 @@ import Home from "./Pages/Home.jsx";
 import Layout from "./Pages/Layout.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import './style/reset.scss';
+import './fonts/Netflix Sans Light.otf';
+import './fonts/Netflix Sans Medium.otf';
+import './fonts/Netflix Sans Bold.otf';
 import Series from "./Pages/Series.jsx";
 import Films from "./Pages/Films.jsx";
 import Nouveautes from "./Pages/Nouveautes.jsx";
@@ -23,7 +26,7 @@ function App() {
                     <Route path={'films'} element={<Films/>}/>
                     <Route path={'new'} element={<Nouveautes/>}/>
                     <Route path={'list'} element={<Liste/>}/>
-                    <Route exact path={'details/:movie_id'} element={<Details/>}/>
+                    <Route path={'details/:movie_id'} element={<Details/>}/>
                     <Route path={'*'} element={<NotFound/>}/>
 
                 </Route>
