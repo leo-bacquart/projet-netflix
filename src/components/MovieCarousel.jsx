@@ -151,14 +151,16 @@ const Item = ({movie}) => {
                             <div>
                                     <button style={{
                                         border: 'none',
-                                        cursor: 'pointer'
+                                        cursor: 'pointer',
+                                        background: "black"
                                     }}>
                                         <PlayCircleIcon />
                                     </button>
                                     <button
                                     style={{
                                         border: 'none',
-                                        cursor: 'pointer'
+                                        cursor: 'pointer',
+                                         background: "black"
                                     }}
                                     >
                                     <AddCircleOutlineIcon />
@@ -169,7 +171,8 @@ const Item = ({movie}) => {
                                     <button onClick={() => reverseLike()}
                                     style={{
                                         border: 'none',
-                                        cursor: 'pointer'
+                                        cursor: 'pointer',
+                                         background: "black"
                                     }}
                                     >
                                         {!likedFilm ? <ThumbUpOffAltIcon/>: <ThumbUpAltIcon/>}
@@ -181,7 +184,8 @@ const Item = ({movie}) => {
                                         <button
                                         style={{
                                             border: 'none',
-                                            cursor: 'pointer'
+                                            cursor: 'pointer',
+                                             background: "black"
                                         }}
                                         >
                                         <KeyboardArrowDownIcon />
@@ -195,15 +199,8 @@ const Item = ({movie}) => {
                             
                             }}>Recommandé à { (movie.vote_average * 10).toFixed(0)}% </p>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '8px 0 8px 0'}}>
-                            <p
-                            style={{
-                                border: '1px solid white',
-                                padding: '2px',
-                                fontSize: '13px',
-                                width: '24px'
-                            }}  
-                            >16+</p>
-                            <p>16 Episodes <span 
+                           
+                            <p> <span 
                             style={{
                                 border: '1px solid white',
                                 padding: '2px',
@@ -213,25 +210,6 @@ const Item = ({movie}) => {
                             >HD</span></p>
                             </div>
                     
-                        </div>
-                        <div style={{display: 'flex', alignItems: 'center'}}>
-                            <p>Sombre</p>
-                            <span style={{
-                                height: '8px',
-                                width: '8px',
-                                backgroundColor: '#646464',
-                                borderRadius: '100px',
-                                margin: '0 4px 0 4px'
-                            }}></span>
-                            <p>Drame</p>
-                            <span style={{
-                                height: '8px',
-                                width: '8px',
-                                backgroundColor: '#646464',
-                                borderRadius: '100px',
-                                margin: '0 4px 0 4px'
-                            }}></span>
-                            <p>Vengeance</p>
                         </div>
                     </div>
             </div>

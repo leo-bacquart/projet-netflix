@@ -37,14 +37,14 @@ const Footer = () => {
                         <li>Audiodescription</li>
                         </a>
                         <a href="http://ir.netflix.com/" target="blank">
-                        <li>Investor Relations</li>
+                        <li>Relations Investisseurs</li>
                         </a>
                         <a href="https://help.netflix.com/legal/privacy">
-                        <li>Privacy</li>
+                        <li>Confidentialité</li>
                         </a>
                         <a href="https://help.netflix.com/contactus">
 
-                        <li>Contact Us</li>
+                        <li>Nous contacter</li>
                         </a>
 
                         
@@ -58,13 +58,13 @@ const Footer = () => {
                 <div>
                     <ul className="liste2 liste">
                         <a href="https://help.netflix.com/" target="blank">
-                        <li>Help Center</li>
+                        <li>Centre d'aide</li>
                         </a>
                         <a href="https://jobs.netflix.com/" target="blank">
-                        <li>Jobs</li>
+                        <li>Recrutements</li>
                         </a>
                         <a href="https://help.netflix.com/legal/notices" target="blank">
-                        <li>Legal Notices</li>
+                        <li>Informations légales</li>
                         </a>
                     </ul>
                 </div>
@@ -72,14 +72,14 @@ const Footer = () => {
                 <div>
                     <ul>
                     <a href="https://www.netflix.com/redeem" target="blank">
-                        <li>Gift Cards</li>
+                        <li>Cartes cadeaux</li>
                     </a>
                     <a href="https://netflix.shop/" target="blank">
-                        <li>Netflix Shop</li>
+                        <li>Boutique Netflix</li>
                         </a>
                         <a href="https://www.netflix.com/Cookies" target="blank">
 
-                        <li>Cookie Preferences</li>
+                        <li>Préférences de cookies</li>
                         </a>
 
 
@@ -90,22 +90,22 @@ const Footer = () => {
                 <div>
                     <ul>
                     <a href="https://media.netflix.com/" target="blank">
-                        <li>Media Center</li>
+                        <li>Presse</li>
                         </a>
                         <a href="https://help.netflix.com/legal/termsofuse" target="blank">
                     
-                        <li>Terms of Use</li>
+                        <li>Conitions d'utilisation</li>
                         </a>
                         <a href="https://help.netflix.com/legal/corpinfo" target="blank">
 
-                        <li>Corporate Information</li>
+                        <li>Mentions légales</li>
                         </a>
                     </ul>
 
                 </div>
 
                 <div className="Service">
-                    <p> Service Code</p>
+                    <p> Code de service</p>
                     
 
                 </div>
