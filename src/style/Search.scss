@@ -35,20 +35,22 @@
   
 .autocomplete-container {
   position: relative;
+  height: 39px;
 }
 
 .autocomplete {
   display: flex;
+  height: 39px;
 }
 
 
 .autocomplete-input {
   border: 1px solid rgba(0, 0, 0, 0.54);
   width: 100%;
-  padding: 8px;
   font-size: 16px;
   line-height: 1.5;
   flex: 1;
+  height: 39px;
 }
 
 .autocomplete-submit {
@@ -59,6 +61,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 39px;
 }
 
 .autocomplete-results-ul {
@@ -68,6 +71,8 @@
   background: none;
   background-color: black;
 }
+
+
 .autocomplete-submit svg {
   width: 24px;
   height: 24px;

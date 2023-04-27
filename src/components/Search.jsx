@@ -76,7 +76,7 @@ function SearchBar() {
   return (
     <div className="Search">
       {isOpen ? (
-        <div style={({border: "1px solid white"})}>
+        <div style={({border: "1px solid white", height:"40px"})}>
           {/* <DatalistInput
             placeholder="Titres, personne, genre..."
             value={searchTerm}
@@ -117,7 +117,8 @@ function SearchBar() {
               </div>
               {isEditing && <ul
                 id='autocomplete-results'
-                className={`autocomplete-results autocomplete-results-ul ${isEditing ? 'hidden' : ''}`} 
+                className={`autocomplete-results autocomplete-results-ul ${isEditing ? 'hidden' : ''}`}
+                style={{ margin: "5px"}}
                 role='listbox'
                 aria-label='Rechercher un titre'
               >
