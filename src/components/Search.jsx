@@ -14,15 +14,17 @@ function SearchBar() {
   const [searchResults, setSearchResults] = useState([]);
   const { setValue, value } = useComboboxControls({ initialValue: '' });
   const navigate = useNavigate();
-  // https://developers.themoviedb.org/3/search/search-movies
+
   React.useEffect(()=> {
     if (searchInProgress){
       return;
     }
+
+    // si pas de recherche en cours -> on commence la recherche
     setSearchInProgress(true);
     setTimeout(()=>{
       searchMovies();
-    }, 1000);
+    }, 1000); // 1 seconde
 
   }, [searchTerm])
 
@@ -62,6 +64,11 @@ function SearchBar() {
     setIsOpen(false);
   }
 
+
+  function handleBlur(){
+    console.log('editing is now false')
+    setTimeout(()=> {setEditing(false); }, 500); 
+  }
   // Rendu des résultats de recherche
   // const resultList = searchResults.map(result => (
   //   <option key={result.id}>
@@ -70,7 +77,9 @@ function SearchBar() {
   // ));
 
   const searchResultList = useMemo(()=> searchResults.map(r=> ({ id: r.id, value: r.title })), [searchResults]);
- // setSearchTerm(searchTerm)
+ // searchResultList = [{id: 9, value: 'Ghost Buster 2},{id: 10, value: 'Ghost Buster 2}]
+ 
+  // setSearchTerm(searchTerm)
   
   console.log('results List:', { isEditing, isOpen, searchResultList})
   return (
@@ -106,11 +115,7 @@ function SearchBar() {
                   aria-autocomplete='both'
                   aria-controls='autocomplete-results'
                   onFocus={()=> { setEditing(true)}}
-                  onBlur={(e)=> {
-                    console.log('editing is now false')
-                     e.preventDefault();
-                      setTimeout(()=> {setEditing(false); }, 500); 
-                    }}
+                  onBlur={handleBlur}
                   value={searchTerm}
                   onChange={handleSearch}
                 />
@@ -123,7 +128,7 @@ function SearchBar() {
                 aria-label='Rechercher un titre'
               >
                 {searchResultList.map(item=> <li key={item.id} className="autocomplete-result-item"><div onClick={(e)=>{ 
-                  e.preventDefault();
+                  // e.preventDefault();
                   console.log('clicked on something')
                   setSearchTerm('');  // vider l'input
                   navigate('/details/'+item.id); 
