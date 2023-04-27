@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   z-index: 10000;
+  background-color: black;
 
   nav {
     margin: 0 50px;
@@ -50,11 +51,13 @@
       width: 40px;
       height: 40px;
       border: none;
+      background-color: black;
 
      img{
       width: 30px;
       height: 30px;
       border-radius: 7px;
+      
      }
 
     }

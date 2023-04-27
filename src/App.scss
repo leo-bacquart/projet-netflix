@@ -1,8 +1,15 @@
 
 * {
-  background: rgb(20, 20, 20);
+  // background: rgb(20, 20, 20);
   color: white;
 
 
+}
+body {
+  background-image: url('../Etoiles.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+    background-size: cover;
 }
 
