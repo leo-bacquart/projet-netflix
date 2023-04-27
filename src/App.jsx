@@ -1,25 +1,15 @@
-import * as React from 'react';
-import './App.scss';
-import Home from "./Pages/Home.jsx";
-import Layout from "./Pages/Layout.jsx";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import './style/reset.scss';
-import './fonts/Netflix Sans Light.otf';
-import './fonts/Netflix Sans Medium.otf';
-import './fonts/Netflix Sans Bold.otf';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
 
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path={'/'} element={<Layout/>}>
-                    <Route index element={<Home/>} />
-
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    )
+  return (
+    <div className="App">
+        <h1>Netflix</h1>
+    </div>
+  )
 }
 
 export default App
